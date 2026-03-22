@@ -87,6 +87,7 @@ MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/your-db-name
  MONGODB_URI=mongodb://localhost:27017/decision-polls
  
 ##5. Start the Development Server
+
 npm run dev
 # or
 yarn dev
@@ -94,7 +95,7 @@ yarn dev
 Then open:
 http://localhost:3000
 
-###Output
+**###Output**
 
 1. Home Page
 
