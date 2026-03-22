@@ -50,7 +50,7 @@ export default function CreatePoll() {
         <Link href="/polls" className="text-blue-600 font-bold mb-8 block">← All Polls</Link>
         
         <div className="bg-white rounded-3xl p-8 shadow-2xl border">
-          <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">New Poll</h1>
+          <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Create New Poll</h1>
           
           <form onSubmit={handleSubmit} className="space-y-6">
             <input
@@ -58,12 +58,12 @@ export default function CreatePoll() {
               placeholder="What should I eat tonight?"
               value={formData.question}
               onChange={(e) => setFormData({...formData, question: e.target.value})}
-              className="w-full p-4 border border-gray-300 rounded-2xl text-lg focus:ring-2 focus:ring-blue-500"
+              className="w-full p-4 border border-gray-500 text-stone-700 rounded-2xl text-lg focus:ring-2 focus:ring-blue-500"
               required
             />
             
             <div>
-              <label className="block text-sm font-semibold mb-2">Options (2-4):</label>
+              <label className="block text-sm text-stone-800 font-semibold mb-2">Options (2-4):</label>
               {formData.options.map((option, index) => (
                 <input
                   key={index}
@@ -75,7 +75,7 @@ export default function CreatePoll() {
                     newOptions[index] = e.target.value;
                     setFormData({...formData, options: newOptions});
                   }}
-                  className="w-full p-3 border border-gray-300 rounded-xl mt-2"
+                  className="w-full p-3 border border-gray-700 text-stone-700 rounded-xl mt-2"
                 />
               ))}
             </div>
@@ -84,7 +84,7 @@ export default function CreatePoll() {
               type="datetime-local"
               value={formData.expiry}
               onChange={(e) => setFormData({...formData, expiry: e.target.value})}
-              className="w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500"
+              className="w-full p-4 border border-gray-500 text-stone-600 rounded-2xl focus:ring-2 focus:ring-blue-500"
               min={new Date(Date.now() + 5*60*1000).toISOString().slice(0,16)}
               required
             />

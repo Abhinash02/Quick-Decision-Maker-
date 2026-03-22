@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import PollCard from '@/components/PollCard';
+import PollCard from '@/components/PollResultsCard';
 
 const FILTERS = [
   { id: 'all', label: 'All Polls', value: '' },
@@ -82,7 +82,7 @@ export default function PollsPage() {
               href="/polls/new"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-3xl hover:scale-105 transition-all"
             >
-              🚀 Create First Poll
+             Create First Poll
             </Link>
           </div>
         ) : (
