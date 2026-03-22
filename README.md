@@ -83,9 +83,9 @@ yarn install
 Create a file .env.local at the root:
 
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/your-db-name
-# or for local MongoDB:
-# MONGODB_URI=mongodb://localhost:27017/decision-polls
-
+ or for local MongoDB:
+ MONGODB_URI=mongodb://localhost:27017/decision-polls
+ 
 ##5. Start the Development Server
 npm run dev
 # or
