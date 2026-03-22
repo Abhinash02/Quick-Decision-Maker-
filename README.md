@@ -40,7 +40,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 
-## 🌐 Live Features
+## Live Features
 
 - Create polls with a question, 2–4 options, and an expiry time.
 - Vote on active polls.
@@ -55,7 +55,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - MongoDB (Mongoose)
 - `@/` path aliases (`src/components/`, `src/app/`, `src/lib/`, etc.)
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 ### 1. Prerequisites
 
