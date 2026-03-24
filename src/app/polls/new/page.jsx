@@ -51,7 +51,7 @@ export default function CreatePoll() {
         
         <div className="bg-white rounded-3xl p-8 shadow-2xl border">
           <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Create New Poll</h1>
-          
+          <label className="block text-sm text-stone-800 font-semibold mb-2">Question:</label>
           <form onSubmit={handleSubmit} className="space-y-6">
             <input
               type="text"
@@ -79,7 +79,7 @@ export default function CreatePoll() {
                 />
               ))}
             </div>
-            
+            <label className="block text-sm text-stone-800 font-semibold mb-2">Expiry Date & Time:</label>
             <input
               type="datetime-local"
               value={formData.expiry}

@@ -23,24 +23,24 @@ export async function GET(request, context) {
   }
 }
 
-export async function DELETE(request, context) {
-  try {
-    await dbConnect();
-    const { id } = await context.params;
+// export async function DELETE(request, context) {
+//   try {
+//     await dbConnect();
+//     const { id } = await context.params;
     
-    const poll = await Poll.findById(id);
-    if (!poll) {
-      return Response.json({ success: false, error: 'Poll not found' }, { status: 404 });
-    }
+//     const poll = await Poll.findById(id);
+//     if (!poll) {
+//       return Response.json({ success: false, error: 'Poll not found' }, { status: 404 });
+//     }
 
-    // Only creator can delete (before votes)
-    if (poll.totalVotes > 0) {
-      return Response.json({ success: false, error: 'Cannot delete after votes' }, { status: 400 });
-    }
+//     // Only creator can delete (before votes)
+//     if (poll.totalVotes > 0) {
+//       return Response.json({ success: false, error: 'Cannot delete after votes' }, { status: 400 });
+//     }
 
-    await Poll.findByIdAndDelete(id);
-    return Response.json({ success: true });
-  } catch (error) {
-    return Response.json({ success: false, error: 'Delete failed' }, { status: 500 });
-  }
-}
+//     await Poll.findByIdAndDelete(id);
+//     return Response.json({ success: true });
+//   } catch (error) {
+//     return Response.json({ success: false, error: 'Delete failed' }, { status: 500 });
+//   }
+// }
